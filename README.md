@@ -1,2 +1,59 @@
-# js-array-tasks
-A set of JavaScript array excercises
+# JavaScript Array tasks
+
+A set of JavaScript excercises for array functions.
+
+## Getting Started
+
+This sandbox includes 2 HTML files, which contain different excercises for JS array manipulation. Assignments are in the form of comments. 
+For each task, there is ta set of JS array, which you will be performing the manipulation on.
+Good luck! 🍀
+
+### Prerequisites
+
+What things you need to install the software and how to install them
+
+```
+Visual Studio Code
+```
+
+Extensions:
+
+```
+Live Server
+Prettier
+```
+
+### Installing
+
+A step by step series of examples that tell you how to get a development env running
+
+Run the Live Server
+
+```
+1. Open the desired HTML file
+2. Right clik on the code or use Alt + L Alt + O
+3. A Chrome window appears with the file running!
+```
+
+### And coding style tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+## Contribution guidelines
+
+1. Create a branch in this repo with your name
+2. push your solution to the branch :)
+
+## Authors
+
+- \*\*\*\* - _Initial work_ - [Matus Giertl](https://github.com/MattGiertl)
+- \*\*\*\* - _Co-star_ - [Patrik Sterba](https://github.com/patrikSterbic)
+
+
+## Acknowledgments
+
+This project takes direct inspiration from [wesbos](https://github.com/wesbos) and his [30 Day Vanilla JS Challenge](https://github.com/wesbos/JavaScript30) :)
