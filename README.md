@@ -35,14 +35,6 @@ Run the Live Server
 3. A Chrome window appears with the file running!
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
 ## Contribution guidelines
 
 1. Create a branch in this repo with your name
