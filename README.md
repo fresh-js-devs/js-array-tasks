@@ -36,7 +36,7 @@ Run the Live Server
 
 ```
 1. Open the desired HTML file
-2. Right clik on the code or use Alt + L Alt + O
+2. Right clik on the code and select Open With Live Server or use Alt + L Alt + O
 3. A Chrome window appears with the file running!
 ```
 
