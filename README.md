@@ -7,8 +7,6 @@ A set of JavaScript excercises for array functions.
 This sandbox includes 2 HTML files, which contain different excercises for JS array manipulation. Assignments are in the form of comments. 
 For each task, there is ta set of JS array, which you will be performing the manipulation on.
 
-Presentation can be found [here](https://1drv.ms/p/s!BP3l4r4fgNZGh7wq3NOG4GH9ass7Gg?e=BNARy6).
-
 Hint: [Look at the Mozilla array function docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
 
 Good luck! 🍀
