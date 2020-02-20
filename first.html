@@ -102,35 +102,108 @@
         'truck',
       ];
 
+
+     
+
+     
+
+  
+
       // Array.prototype.map()
       // 1. Give us an array of the inventors' first and last names
 
+      /*const inventorsName = inventors.map(inventor => {
+       const firstName = inventor.first;
+       const lastName = inventor.last;
+       return {
+         firstName: firstName,
+         lastName: lastName
+       }
+     });*/
+
+      //const array = inv
       // Array.prototype.filter()
       // 2. Filter the list of inventors for those who were born in the 1500's
+
+      /*const inventors = inventors.filter(inventor => inventor.year >= 1501 && inventor.year <= 1600);
+     console.log(inventors)*/
 
       // Array.prototype.sort()
       // 3. Sort the inventors by birthdate, oldest to youngest
 
+      /*const inv3 = inventors.sort((inventor1, inventor2) => inventor1.year - inventor2.year)
+     console.log(inv3)*/
+
       // 4. How many years did all the inventors live?
+
+    /*const totalYear = inventors.reduce((total, inventor) => total + (inventor.passed - inventor.year), 0);
+     console.log(totalYear)*/
 
       // 5. Sort the inventors by years lived
 
+      /*const ages = inventors.sort((inv1, inv2) => {
+        const inv1Age = inv1.passed - inv2.year;
+        const inv2Age = inv2.passed - inv2.year;
+        return inv1Age > inv2Age ? -1 : 1;
+      });
+
+      console.log(ages);*/
+
       // 6. Create a list of people, whose surnames includes 'rr'
+
+      /*const peopleWithIncludeRRInSurName = people.filter(x => {
+        const [p1Last, p1First] = x.split(', ');
+        if(p1Last.includes("rr")) return true;
+      });
+      console.log(peopleWithIncludeRRInSurName)*/
 
       // 7. Sort the people alphabetically by last name
 
+      /*const peopleAlphabeticallyByLastName = people.sort((p1, p2) => {
+        const [p1First, p1Last] = p1.split(', ');
+        return p1First - p1Last ? -1 : 1;
+      });
+      console.log(peopleAlphabeticallyByLastName)*/
+
       // 8. Sum up the instances of vehicles
+
+      /*const countOfVehicleInstances = {};
+      vehicles.forEach(x => {
+        countOfVehicleInstances[x] = (countOfVehicleInstances[x] || 0) + 1 // || if it is first record to list, value is not taken from list, because is undefined
+      });
+
+      console.log(countOfVehicleInstances);*/
 
       // 9. Array.prototype.some() // is at least one person in the morePeople array 19 or older?
 
+      /*const OlderThen = morePeople.some(x => {
+        const age = new Date().getFullYear() - x.year;
+        if(age >= 19)
+          return true;
+      });
+      console.log(OlderThen);*/
+
       // 10. Array.prototype.every() // is everyone in the morePeople array 19 or older?
+
+      /*const everyoneOlderThan = morePeople.every(x => {
+        const age = new Date().getFullYear() - x.year;
+        if(age >= 19)
+          return true;
+      });
+      console.log(everyoneOlderThan)*/
 
       // 11. Array.prototype.find()
       // Find is like filter, but instead returns just the one you are looking for
       // find the comment with the ID of 823423
 
+      /*const foundedRecord = comments.find(x => x.id = 823423);
+      console.log(foundedRecord);*/
+
       // Array.prototype.findIndex()
       // 13. delete the comment with the ID of 823423
+
+     /* const foundedItem = comments.findIndex(x => x.id = 823423);
+      const removedItem = comments.splice(foundedItem, 1);*/
 
     </script>
   </body>
