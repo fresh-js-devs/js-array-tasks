@@ -30,7 +30,7 @@
         "Beck, Glenn",
         "Becker, Carl",
         "Beckett, Samuel",
-        "Beddoes, Mick",
+        "Aeddoes, Mick",
         "Beecher, Henry",
         "Beethoven, Ludwig",
         "Begin, Menachem",
@@ -49,7 +49,7 @@
         "Bergman, Ingmar",
         "Berio, Luciano",
         "Berle, Milton",
-        "Berlin, Irving",
+        "Berlin, Irrving",
         "Berne, Eric",
         "Bernhard, Sandra",
         "Berra, Yogi",
@@ -102,61 +102,92 @@
         "truck",
       ];
 
-      // Array.prototype.filter()
-      // 1. Filter the list of inventors for those who were born in the 1500's
-      const fifteen = inventors.filter(
-        (inventor) => inventor.year >= 1500 && inventor.year < 1600
-      );
-
-      console.table(fifteen);
-
       // Array.prototype.map()
-      // 2. Give us an array of the inventor first and last names
-      const fullNames = inventors.map(
+      // 1. Give us an array of the inventors' first and last names
+
+      const namedInventors = inventors.map(
         (inventor) => `${inventor.first} ${inventor.last}`
       );
-      console.log(fullNames);
 
+      const namedInventorsTwo = inventors.map(
+        ({ first, last }) => `${first} ${last}`
+      );
+
+      //const array = inv
+      // Array.prototype.filter()
+      // 2. Filter the list of inventors for those who were born in the 1500's
+
+      const sixteenthCenturyInventors = inventors.filter(
+        (inv) => inv.year >= 1500 && inv.passed < 1700
+      );
       // Array.prototype.sort()
       // 3. Sort the inventors by birthdate, oldest to youngest
-      // const ordered = inventors.sort(function(a, b) {
-      //   if(a.year > b.year) {
-      //     return 1;
-      //   } else {
-      //     return -1;
-      //   }
-      // });
 
-      // If compareFunction(a, b) returns less than 0, sort a to an index lower than b (i.e. a comes first).
-      // If compareFunction(a, b) returns 0, leave a and b unchanged with respect to each other, but sorted with respect to all different elements. Note: the ECMAscript standard does not guarantee this behavior, thus, not all browsers (e.g. Mozilla versions dating back to at least 2003) respect this.
-      // If compareFunction(a, b) returns greater than 0, sort b to an index lower than a (i.e. b comes first).
-      const ordered = inventors.sort((a, b) => (a.year > b.year ? 1 : -1));
-      console.table(ordered);
-
-      // Array.prototype.reduce()
+      const sortedByBirthDate = inventors.sort((a, b) =>
+        a.passed - a.year > b.passed - b.year ? 1 : -1
+      );
       // 4. How many years did all the inventors live?
-      const totalYears = inventors.reduce((total, inventor) => {
-        return total + (inventor.passed - inventor.year);
-      }, 0);
+
+      const yearsLived = inventors.reduce(
+        (total, curr) => total + (curr.passed - curr.year)
+      );
 
       // 5. Sort the inventors by years lived
-
+      const sortedByYearsLived = inventors.sort((a, b) =>
+        a.passed - a.year > b.passed - b.year ? 1 : -1
+      );
       // 6. Create a list of people, whose surnames includes 'rr'
 
+      const includeRR = people.filter((person) => {
+        const [aFirst, aLast] = person.split(", ");
+        return aLast.includes("rr");
+      });
+      console.log(includeRR);
+
       // 7. Sort the people alphabetically by last name
+      const sorted = people.sort((a, b) => {
+        if (a.split(",")[1] < b.split(",")[1]) return -1;
+        if (a.split(",")[1] > b.split(",")[1]) return 1;
+        return 0;
+      });
+      console.log(sorted);
 
       // 8. Sum up the instances of vehicles
 
+      const initialValue = {};
+      const reducer = function (vehicle, count) {
+        if (!vehicle[count]) {
+          vehicle[count] = 1;
+        } else {
+          vehicle[count] = vehicle[count] + 1;
+        }
+        return vehicle;
+      };
+      const result = vehicles.reduce(reducer, initialValue);
+      console.log(result);
+
       // 9. Array.prototype.some() // is at least one person in the morePeople array 19 or older?
+      const now = new Date().getFullYear();
+      const someOlder = morePeople.some((old) => now - old.year >= 19);
+      console.log(`Is there somebody 19 or older?` + " " + someOlder);
 
       // 10. Array.prototype.every() // is everyone in the morePeople array 19 or older?
+
+      const everyOlder = morePeople.every((old) => now - old.year >= 19);
+      console.log(`Is there everybody 19 or older?` + " " + everyOlder);
 
       // 11. Array.prototype.find()
       // Find is like filter, but instead returns just the one you are looking for
       // find the comment with the ID of 823423
-
+      const find = comments.find(({ id }) => id == 823423);
+      console.log(find);
       // Array.prototype.findIndex()
       // 13. delete the comment with the ID of 823423
+      const index = comments.findIndex(({ id }) => id == 823423);
+      if (index > -1) {
+        comments.splice(index, 1);
+      }
+      console.log(comments);
     </script>
   </body>
 </html>
