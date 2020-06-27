@@ -168,11 +168,12 @@
 
       // 9. Array.prototype.some() // is at least one person in the morePeople array 19 or older?
       const now = new Date().getFullYear();
+      // tu skor semanticka vec... prehladavas array people, takze namiesto old by som to nazval person
       const someOlder = morePeople.some((old) => now - old.year >= 19);
       console.log(`Is there somebody 19 or older?` + " " + someOlder);
 
-      // 10. Array.prototype.every() // is everyone in the morePeople array 19 or older?
-
+      // 10. Array.prototype.ev
+      // zase namiesto old.year si to homol destructnut, tym padom by si skoncil s ({ year }) a vyhol by si sa old.year
       const everyOlder = morePeople.every((old) => now - old.year >= 19);
       console.log(`Is there everybody 19 or older?` + " " + everyOlder);
 
